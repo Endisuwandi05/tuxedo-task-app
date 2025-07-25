@@ -1,1 +1,1 @@
-## My Tuxedo task app
+## My tuxedo task app
