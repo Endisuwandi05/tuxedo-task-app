@@ -4,6 +4,10 @@ A simple task management application designed to help users manage their daily t
 This project is built by Endi Suwandi as part of a bootcamp to implement the principles of Computational Thinking and Fullstack Web Development.
 The application is inspired by the interface and basic functionality of the popular task management tool, Microsoft To Do
 
+Design links:
+
+- <https://figma.com/...>
+
 ## ✨ Key Features (Core Functionality)
 
 This application will focus on the following core features:
