@@ -1,6 +1,8 @@
 # 🚀 Tuxedo Task App
 
-A simple task management application designed to help users manage their daily tasks with a clean and intuitive interface. This project is built as part of a bootcamp to implement the principles of Computational Thinking and Fullstack Web development. This project is inspired by the interface and basic functionality of the popular task management application, Microsoft To Do.
+A simple task management application designed to help users manage their daily tasks with a clean and intuitive interface.
+This project is built by Endi Suwandi as part of a bootcamp to implement the principles of Computational Thinking and Fullstack Web Development.
+The application is inspired by the interface and basic functionality of the popular task management tool, Microsoft To Do
 
 ## ✨ Key Features (Core Functionality)
 
