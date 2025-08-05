@@ -1,20 +1,16 @@
-import "./Globals.css";
-function App() {
-  return <div className="App"></div>;
-}
+import TaskItem from "./components/TaskItem";
 
-export function Task({
-  name,
-  isCompleted,
-}: {
-  name: string;
-  isCompleted: boolean;
-}) {
+function App() {
   return (
-    <div>
-      <h2>{name}</h2>
-      {isCompleted && <p>Completed ✅</p>}
-      {!isCompleted && <p>Incomplete ❌</p>}
+    <div className="App">
+      <h1>Daftar Tugas</h1>
+
+      <TaskItem name="Belajar React" isCompleted={true} />
+      <TaskItem name="Selesaikan Proyek Figma" isCompleted={true} />
+      <TaskItem name="Makan Siang" isCompleted={false} />
+      <TaskItem name="Makan malam" isCompleted={true} />
     </div>
   );
 }
+
+export default App;
