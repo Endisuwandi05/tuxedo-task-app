@@ -9,8 +9,8 @@ const dataTasks = [
 
 function App() {
   return (
-    <div className="App">
-      <h1>Daftar Tugas</h1>
+    <div className="p-10 space-y-10">
+      <h1 className="text-3xl font-bold">Daftar Tugas</h1>
 
       <ul>
         {dataTasks.map((task) => {
