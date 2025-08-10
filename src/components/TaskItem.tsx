@@ -5,15 +5,17 @@ interface TaskProps {
 
 function TaskItem({ name, isCompleted }: TaskProps) {
   return (
-    <div
-      style={{ padding: "10px", border: "1px solid #eee", marginBottom: "5px" }}
-    >
-      <h2>Nama: {name}</h2>
-      {isCompleted ? (
-        <p style={{ color: "green" }}>Status: Completed ✅</p>
-      ) : (
-        <p style={{ color: "red" }}>Status: Incomplete ❌</p>
-      )}
+    <div className="p-2.5 border border-gray-300 mb-1.25">
+      <h2 className="text-lg font-bold">{name}</h2>
+
+      <p>
+        <span>Status: </span>
+        {isCompleted ? (
+          <span className="text-green-700">Completed ✅</span>
+        ) : (
+          <span className="text-red-700">Incomplete ❌</span>
+        )}
+      </p>
     </div>
   );
 }
