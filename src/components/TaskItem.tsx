@@ -5,7 +5,7 @@ interface TaskProps {
 
 function TaskItem({ name, isCompleted }: TaskProps) {
   return (
-    <div className="p-2.5 border border-gray-300 mb-1.25">
+    <div className="mb-1.25 border border-gray-300 p-2.5">
       <h2 className="text-lg font-bold">{name}</h2>
 
       <p>

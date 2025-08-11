@@ -13,7 +13,6 @@ Design links:
 This application will focus on the following core features:
 
 - **Task Management:**
-
   - Add new tasks.
 
   - Edit existing tasks.
@@ -23,19 +22,16 @@ This application will focus on the following core features:
   - Mark tasks as complete or incomplete.
 
 - **List View:**
-
   - Display a list of all saved tasks.
 
   - A responsive and easy-to-use interface.
 
 - **Data Storage (Local):**
-
   - Task data is temporarily stored in **application memory (React state)**. This data will be lost when the application is closed or refreshed.
 
 ## 🛠️ Technologies Used
 
 - **Frontend:**
-
   - [**React**](https://react.dev/): A JavaScript library for building user interfaces.
 
   - [**TypeScript**](https://www.typescriptlang.org/): A typed superset of JavaScript that compiles to plain JavaScript.
@@ -43,7 +39,6 @@ This application will focus on the following core features:
   - [**Vite**](https://vitejs.dev/): A fast build tool and dev server for modern frontend projects.
 
 - **Package Manager:**
-
   - [**Bun**](https://bun.sh/): A fast JavaScript runtime, bundler, test runner, and package manager.
 
 ## 🚀 Getting Started

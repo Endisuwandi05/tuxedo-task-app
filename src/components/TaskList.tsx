@@ -1,10 +1,10 @@
-import TaskItem from "./TaskItem";
+import TaskItem from './TaskItem';
 
 const dataTasks = [
-  { id: 1, name: "Belajar React", isCompleted: true },
-  { id: 2, name: "Selesaikan Proyek Figma", isCompleted: true },
-  { id: 3, name: "Makan Siang", isCompleted: false },
-  { id: 4, name: "Makan malam", isCompleted: true },
+  { id: 1, name: 'Belajar React', isCompleted: true },
+  { id: 2, name: 'Selesaikan Proyek Figma', isCompleted: true },
+  { id: 3, name: 'Makan Siang', isCompleted: false },
+  { id: 4, name: 'Makan malam', isCompleted: true },
 ];
 
 export function TaskList() {
