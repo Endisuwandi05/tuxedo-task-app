@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    // ... kode konfigurasi lainnya
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
