@@ -1,21 +1,30 @@
+// TaskItem.tsx
+
+// Definisikan interface untuk prop yang diterima
 interface TaskProps {
-  name: string;
   isCompleted: boolean;
+  name: string;
+  // Tambahkan prop onToggleCompletion di sini
+  // Ini adalah fungsi yang tidak mengembalikan nilai (void)
+  onToggleCompletion: () => void;
 }
 
-function TaskItem({ name, isCompleted }: TaskProps) {
+// Gunakan interface tersebut pada komponen
+export function TaskItem({ isCompleted, name, onToggleCompletion }: TaskProps) {
   return (
-    <div className="mb-1.25 border border-gray-300 p-2.5">
-      <h2 className="text-lg font-bold">{name}</h2>
-
-      <p>
-        <span>Status: </span>
-        {isCompleted ? (
-          <span className="text-green-700">Completed ✅</span>
-        ) : (
-          <span className="text-red-700">Incomplete ❌</span>
-        )}
-      </p>
+    <div className="flex items-center justify-between p-4 border rounded-lg shadow-sm">
+      <div className="flex items-center gap-2">
+        {/* Gunakan onToggleCompletion di sini, misalnya pada sebuah button atau div */}
+        <input
+          type="checkbox"
+          checked={isCompleted}
+          onChange={onToggleCompletion} // Panggil fungsi saat checkbox diubah
+          className="form-checkbox h-5 w-5 text-blue-600 rounded"
+        />
+        <span className={isCompleted ? 'line-through text-gray-500' : 'text-gray-900'}>
+          {name}
+        </span>
+      </div>
     </div>
   );
 }
