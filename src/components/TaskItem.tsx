@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 interface TaskProps {
   isCompleted: boolean;
   name: string;
@@ -17,7 +19,7 @@ export function TaskItem({
         <input
           type="checkbox"
           checked={isCompleted}
-          onChange={onToggleCompletion} // Panggil fungsi saat checkbox diubah
+          onChange={onToggleCompletion}
           className="form-checkbox h-5 w-5 text-blue-600 rounded"
         />
         <span
@@ -27,7 +29,9 @@ export function TaskItem({
         >
           {name}
         </span>
-        <button onClick={deleteTask}>Delete</button>
+        <Button variant="destructive" size="sm" onClick={deleteTask}>
+          Delete
+        </Button>
       </div>
     </div>
   );
