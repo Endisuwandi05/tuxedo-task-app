@@ -5,11 +5,12 @@ const dataTasks = [
   { id: 2, name: 'Selesaikan Proyek Figma', isCompleted: true },
   { id: 3, name: 'Makan Siang', isCompleted: false },
   { id: 4, name: 'Makan malam', isCompleted: true },
+  { id: 4, name: 'Makan malam', isCompleted: true },
 ];
 
 export function TaskList() {
   return (
-    <ul>
+    <ul className="flex flex-col gap-y-3">
       {dataTasks.map((task) => {
         return (
           <li key={task.id}>
