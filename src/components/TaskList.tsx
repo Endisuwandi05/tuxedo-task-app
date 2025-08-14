@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import TaskItem from './TaskItem';
+import { useState } from "react";
+import TaskItem from "./TaskItem";
 
 const initialDataTasks = [
-  { id: 1, name: 'Belajar React', isCompleted: true },
-  { id: 2, name: 'Selesaikan Proyek Figma', isCompleted: true },
-  { id: 3, name: 'Makan Siang', isCompleted: false },
-  { id: 4, name: 'Makan Malam', isCompleted: true },
-  { id: 5, name: 'Makan Makan', isCompleted: true },
+  { id: 1, name: "Belajar React", isCompleted: true },
+  { id: 2, name: "Selesaikan Proyek Figma", isCompleted: true },
+  { id: 3, name: "Makan Siang", isCompleted: false },
+  { id: 4, name: "Makan Malam", isCompleted: true },
+  { id: 5, name: "Makan Makan", isCompleted: true },
 ];
 
 export function TaskList() {
@@ -19,6 +19,13 @@ export function TaskList() {
     setTasks(updatedTasks);
   };
 
+  const handleDeleteTask = (taskId) => {
+    const updatedTasks = tasks.filter((task) => {
+      return task.id !== taskId;
+    });
+    setTasks(updatedTasks);
+  };
+
   return (
     <ul className="flex flex-col gap-y-3">
       {tasks.map((task) => (
@@ -27,10 +34,10 @@ export function TaskList() {
             isCompleted={task.isCompleted}
             name={task.name}
             onToggleCompletion={() => toggleTaskCompletion(task.id)}
+            onDeleteTask={() => handleDeleteTask(task.id)}
           />
         </li>
       ))}
     </ul>
   );
 }
-
