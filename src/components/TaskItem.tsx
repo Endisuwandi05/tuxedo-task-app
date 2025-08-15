@@ -1,17 +1,13 @@
+
 interface TaskProps {
   isCompleted: boolean;
   name: string;
-
+  
   onToggleCompletion: () => void;
-  onDeleteTask: () => void;
 }
 
-export function TaskItem({
-  isCompleted,
-  name,
-  onToggleCompletion,
-  onDeleteTask,
-}: TaskProps) {
+
+export function TaskItem({ isCompleted, name, onToggleCompletion }: TaskProps) {
   return (
     <div className="flex items-center justify-between p-4 border rounded-lg shadow-sm">
       <div className="flex items-center gap-2">
@@ -28,6 +24,9 @@ export function TaskItem({
         >
           {name}
         </span>
+        <Button variant="destructive" size="sm" onClick={deleteTask}>
+          Delete
+        </Button>
       </div>
       <button
         onClick={onDeleteTask}
