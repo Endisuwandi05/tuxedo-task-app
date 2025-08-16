@@ -1,6 +1,8 @@
 import { useState } from "react";
 import TaskItem from "@/components/TaskItem";
 import { Button } from "@/components/ui/button";
+import { Label } from "./ui/label";
+import { Input } from "./ui/input";
 
 const initialDataTasks = [
   { id: 1, name: "Belajar React", isCompleted: true },
@@ -13,7 +15,9 @@ const initialDataTasks = [
 export function TaskList() {
   const [tasks, setTasks] = useState(initialDataTasks);
 
-  const addTask = () => {
+  const addTask = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
     const newTask = {
       id: tasks.length + 1,
       name: "Example Task",
@@ -39,7 +43,11 @@ export function TaskList() {
   return (
     <div>
       <div>
-        <Button onClick={addTask}>Add Task</Button>
+        <form method="post" onSubmit={addTask}>
+          <Label htmlFor="name">Name:</Label>
+          <Input id="name" name="name" />
+          <Button type="submit">Add Task</Button>
+        </form>
       </div>
 
       <ul className="flex flex-col gap-y-3">
