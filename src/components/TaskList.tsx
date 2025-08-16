@@ -1,6 +1,8 @@
 import { useState } from "react";
 import TaskItem from "@/components/TaskItem";
 import { Button } from "@/components/ui/button";
+import { Label } from "./ui/label";
+import { Input } from "./ui/input";
 
 const initialDataTasks = [
   { id: 1, name: "Belajar React", isCompleted: true },
@@ -40,7 +42,7 @@ export function TaskList() {
   return (
 
 
-    
+
 
       <div>
         <Button onClick={addTask}>Add Task</Button>
