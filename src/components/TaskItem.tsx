@@ -1,15 +1,21 @@
+import { Button } from "@/components/ui/button";
 
 interface TaskProps {
   isCompleted: boolean;
   name: string;
-  
   onToggleCompletion: () => void;
+  deleteTask: () => void;
 }
 
-
-export function TaskItem({ isCompleted, name, onToggleCompletion }: TaskProps) {
+export function TaskItem({
+  isCompleted,
+  name,
+  onToggleCompletion,
+  deleteTask,
+}: TaskProps) {
   return (
     <div className="flex items-center justify-between p-4 border rounded-lg shadow-sm">
+      {/* Container untuk checkbox dan nama */}
       <div className="flex items-center gap-2">
         <input
           type="checkbox"
@@ -24,16 +30,11 @@ export function TaskItem({ isCompleted, name, onToggleCompletion }: TaskProps) {
         >
           {name}
         </span>
-        <Button variant="destructive" size="sm" onClick={deleteTask}>
-          Delete
-        </Button>
       </div>
-      <button
-        onClick={onDeleteTask}
-        className="text-red-500 hover:text-red-700"
-      >
-        Hapus
-      </button>
+      {/* Tombol Delete, sekarang terpisah dari elemen di atas */}
+      <Button variant="destructive" size="sm" onClick={deleteTask}>
+        Delete
+      </Button>
     </div>
   );
 }
