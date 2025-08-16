@@ -24,7 +24,7 @@ export function TaskList() {
     if (!name) return;
 
     const newTask = {
-      id: tasks.length + 1,
+      id: tasks[tasks.length - 1]?.id + 1 || 1,
       name: name,
       isCompleted: false,
     };
