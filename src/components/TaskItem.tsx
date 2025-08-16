@@ -15,7 +15,7 @@ export function TaskItem({
 }: TaskProps) {
   return (
     <div className="flex items-center justify-between p-4 border rounded-lg shadow-sm">
-      {/* Container untuk checkbox dan nama */}
+    
       <div className="flex items-center gap-2">
         <input
           type="checkbox"
@@ -31,7 +31,7 @@ export function TaskItem({
           {name}
         </span>
       </div>
-      {/* Tombol Delete, sekarang terpisah dari elemen di atas */}
+     
       <Button variant="destructive" size="sm" onClick={deleteTask}>
         Delete
       </Button>
