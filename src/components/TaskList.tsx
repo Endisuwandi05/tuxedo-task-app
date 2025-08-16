@@ -1,5 +1,6 @@
 import { useState } from "react";
-import TaskItem from "./TaskItem";
+import TaskItem from "@/components/TaskItem";
+import { Button } from "@/components/ui/button";
 
 const initialDataTasks = [
   { id: 1, name: "Belajar React", isCompleted: true },
@@ -11,6 +12,17 @@ const initialDataTasks = [
 
 export function TaskList() {
   const [tasks, setTasks] = useState(initialDataTasks);
+
+  const addTask = () => {
+    const newTask = {
+      id: tasks.length + 1,
+      name: "Example Task",
+      isCompleted: false,
+    };
+
+    const updatedTasks = [...tasks, newTask];
+    setTasks(updatedTasks);
+  };
 
   const toggleTaskCompletion = (taskId: number) => {
     const updatedTasks = tasks.map((task) =>
@@ -25,17 +37,23 @@ export function TaskList() {
   };
 
   return (
-    <ul className="flex flex-col gap-y-3">
-      {tasks.map((task) => (
-        <li key={task.id}>
-          <TaskItem
-            isCompleted={task.isCompleted}
-            name={task.name}
-            onToggleCompletion={() => toggleTaskCompletion(task.id)}
-            deleteTask={() => deleteTask(task.id)}
-          />
-        </li>
-      ))}
-    </ul>
+    <div>
+      <div>
+        <Button onClick={addTask}>Add Task</Button>
+      </div>
+
+      <ul className="flex flex-col gap-y-3">
+        {tasks.map((task) => (
+          <li key={task.id}>
+            <TaskItem
+              isCompleted={task.isCompleted}
+              name={task.name}
+              onToggleCompletion={() => toggleTaskCompletion(task.id)}
+              deleteTask={() => deleteTask(task.id)}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
