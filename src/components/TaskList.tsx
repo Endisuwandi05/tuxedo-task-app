@@ -18,9 +18,14 @@ export function TaskList() {
   const addTask = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    const formData = new FormData(event.currentTarget);
+
+    const name = formData.get("name")?.toString();
+    if (!name) return;
+
     const newTask = {
       id: tasks.length + 1,
-      name: "Example Task",
+      name: name,
       isCompleted: false,
     };
 
@@ -41,11 +46,11 @@ export function TaskList() {
   };
 
   return (
-    <div>
+    <div className="space-y-10">
       <div>
-        <form method="post" onSubmit={addTask}>
+        <form method="post" onSubmit={addTask} className="space-y-2">
           <Label htmlFor="name">Name:</Label>
-          <Input id="name" name="name" />
+          <Input id="name" name="name" className="max-w-3xs" />
           <Button type="submit">Add Task</Button>
         </form>
       </div>

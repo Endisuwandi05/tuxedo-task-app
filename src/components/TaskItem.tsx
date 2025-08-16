@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { TrashIcon } from "lucide-react";
 
 interface TaskProps {
   isCompleted: boolean;
@@ -15,7 +16,6 @@ export function TaskItem({
 }: TaskProps) {
   return (
     <div className="flex items-center justify-between p-4 border rounded-lg shadow-sm">
-    
       <div className="flex items-center gap-2">
         <input
           type="checkbox"
@@ -31,9 +31,9 @@ export function TaskItem({
           {name}
         </span>
       </div>
-     
+
       <Button variant="destructive" size="sm" onClick={deleteTask}>
-        Delete
+        <TrashIcon></TrashIcon>
       </Button>
     </div>
   );
