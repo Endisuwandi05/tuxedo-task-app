@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-
+import { TrashIcon } from "lucide-react";
 interface TaskProps {
   isCompleted: boolean;
   name: string;

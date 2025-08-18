@@ -3,7 +3,6 @@ import TaskItem from "@/components/TaskItem";
 import { Button } from "@/components/ui/button";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
-import { TrashIcon } from "lucide-react";
 
 const initialDataTasks = [
   { id: 1, name: "Belajar React", isCompleted: true },
@@ -18,7 +17,7 @@ export function TaskList() {
 
   const addTask = () => {
     const newTask = {
-      id: tasks.length + 1,
+      id: tasks[tasks.length - 1]?.id + 1 || 1,
       name: "Example Task",
       isCompleted: false,
     };
@@ -42,13 +41,11 @@ export function TaskList() {
   return (
     <div>
       <div>
-        <div>
-          <form method="post" onSubmit={addTask}>
-            <Label htmlFor="name">Name:</Label>
-            <Input id="name" name="name" />
-            <Button type="submit">Add Task</Button>
-          </form>
-        </div>
+        <form method="post" onSubmit={addTask}>
+          <Label htmlFor="name">Name:</Label>
+          <Input id="name" name="name" />
+          <Button type="submit">Add Task</Button>
+        </form>
       </div>
       <ul className="flex flex-col gap-y-3">
         {tasks.map((task) => (
