@@ -6,10 +6,17 @@ import { initialDataTasks } from "./data/Tasks";
 export default function App() {
   const [tasks, setTasks] = useState(initialDataTasks);
 
-  const addTask = (taskName: string) => {
+  const addTask = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+
+    const name = formData.get("name")?.toString();
+    if (!name) return;
+
     const newTask = {
       id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1,
-      name: taskName,
+      name: name,
       isCompleted: false,
     };
     setTasks([...tasks, newTask]);
