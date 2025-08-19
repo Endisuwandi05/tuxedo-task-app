@@ -1,7 +1,7 @@
 export function Navbar() {
   return (
-    <nav>
-      <h1>Tuxedo</h1>
+    <nav className="bg-amber-100 flex justify-end">
+      <h1 className="font-bold">Tuxedo</h1>
       <ul>
         <li>Home</li>
         <li>About</li>
