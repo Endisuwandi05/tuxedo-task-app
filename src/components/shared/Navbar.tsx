@@ -1,10 +1,18 @@
+import { Link } from "react-router";
+
 export function Navbar() {
   return (
-    <nav className="bg-amber-100 flex justify-end">
-      <h1 className="font-bold">Tuxedo</h1>
+    <nav className="">
+      <h1 className="font-bold">
+        <Link to="/">Tuxedo</Link>
+      </h1>
       <ul>
-        <li>Home</li>
-        <li>About</li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
       </ul>
     </nav>
   );
