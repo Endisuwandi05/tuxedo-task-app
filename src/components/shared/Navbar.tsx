@@ -4,6 +4,7 @@ export function Navbar() {
       <h1>Tuxedo</h1>
       <ul>
         <li>Home</li>
+        <li>About</li>
       </ul>
     </nav>
   );
