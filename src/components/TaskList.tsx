@@ -44,7 +44,9 @@ export function TaskList() {
         <form method="post" onSubmit={addTask}>
           <Label htmlFor="name">Name:</Label>
           <Input id="name" name="name" />
-          <Button type="submit">Add Task</Button>
+          <Button type="submit" className="my-4">
+            Add Task
+          </Button>
         </form>
       </div>
       <ul className="flex flex-col gap-y-3">
