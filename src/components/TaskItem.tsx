@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { TrashIcon } from "lucide-react";
+
 interface TaskProps {
   isCompleted: boolean;
   name: string;
@@ -32,7 +33,7 @@ export function TaskItem({
       </div>
 
       <Button variant="destructive" size="sm" onClick={deleteTask}>
-        <TrashIcon></TrashIcon>
+        <TrashIcon />
       </Button>
     </div>
   );
