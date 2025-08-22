@@ -2,11 +2,11 @@ import { Link } from "react-router";
 
 export function Navbar() {
   return (
-    <nav className="">
+    <nav className="flex flex-col gap-y-8">
       <h1 className="font-bold">
         <Link to="/">Tuxedo</Link>
       </h1>
-      <ul>
+      <ul className="flex flex-col gap-y-8">
         <li>
           <Link to="/">Home</Link>
         </li>
