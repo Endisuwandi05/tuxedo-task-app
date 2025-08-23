@@ -5,7 +5,6 @@ import { initialDataTasks } from "./data/Tasks";
 
 export default function App() {
   const [tasks, setTasks] = useState(initialDataTasks);
-
   const addTask = (taskName: string) => {
     const newTask = {
       id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1,
