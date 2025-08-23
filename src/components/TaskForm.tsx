@@ -1,15 +1,26 @@
 import React from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+import { Label } from "@radix-ui/react-label";
 
 interface TaskFormProps {
-  onAddTask: (event: React.FormEvent<HTMLFormElement>) => void;
+  onAddTask: (taskName: string) => void;
 }
 
 export default function TaskForm({ onAddTask }: TaskFormProps) {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get("name");
+
+    console.log("name", name);
+  };
+
   return (
-    <form method="post" onSubmit={onAddTask} className="flex gap-2 mb-6">
+    <form method="post" onSubmit={handleSubmit} className="flex gap-2 mb-6">
+      <Label htmlFor="task-title">Daftar Tugas</Label>
       <Input
+        id="Add a new task"
         type="text"
         name="name"
         placeholder="Add a new task"

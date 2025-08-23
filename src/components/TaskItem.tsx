@@ -6,6 +6,7 @@ interface TaskProps {
   name: string;
   onToggleCompletion: () => void;
   deleteTask: () => void;
+  handleSubmit: () => void;
 }
 
 export function TaskItem({
