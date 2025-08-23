@@ -12,8 +12,9 @@ export default function TaskForm({ onAddTask }: TaskFormProps) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const name = formData.get("name");
-
-    console.log("name", name);
+    if (typeof name === "string" && name.trim() !== "") {
+      onAddTask(name.trim());
+    }
   };
 
   return (
