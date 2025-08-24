@@ -19,7 +19,7 @@ export default function TaskForm({ onAddTask }: TaskFormProps) {
 
   return (
     <form method="post" onSubmit={handleSubmit} className="flex gap-2 mb-6">
-      <Label htmlFor="task-title">Daftar Tugas</Label>
+      <Label htmlFor="task-title"></Label>
       <Input
         id="Add a new task"
         type="text"
