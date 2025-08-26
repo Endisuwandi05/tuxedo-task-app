@@ -1,15 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { TrashIcon } from "lucide-react";
+import { Link } from "react-router";
 
 interface TaskProps {
+  id: number;
   isCompleted: boolean;
   name: string;
-
   onToggleCompletion: () => void;
   deleteTask: () => void;
 }
 
 export function TaskItem({
+  id,
   isCompleted,
   name,
   onToggleCompletion,
@@ -32,10 +34,14 @@ export function TaskItem({
           {name}
         </span>
       </div>
-
-      <Button variant="destructive" size="sm" onClick={deleteTask}>
-        <TrashIcon />
-      </Button>
+      <div className="flex gap-2">
+        <Button asChild variant="outline" size="sm">
+          <Link to={`/tasks/${id}`}>View</Link>
+        </Button>
+        <Button variant="destructive" size="sm" onClick={deleteTask}>
+          <TrashIcon />
+        </Button>
+      </div>
     </div>
   );
 }
