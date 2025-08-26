@@ -4,6 +4,7 @@ import { TrashIcon } from "lucide-react";
 interface TaskProps {
   isCompleted: boolean;
   name: string;
+
   onToggleCompletion: () => void;
   deleteTask: () => void;
 }
@@ -21,7 +22,7 @@ export function TaskItem({
           type="checkbox"
           checked={isCompleted}
           onChange={onToggleCompletion}
-          className="form-checkbox h-5 w-5 text-blue-600 rounded"
+          className="form-checkbox h-5 w-5 text-blue-600 rounded-full"
         />
         <span
           className={
