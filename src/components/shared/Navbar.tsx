@@ -13,7 +13,7 @@ export function Navbar() {
         </Link>
 
         <Link
-          to="/memulai"
+          to="/onboard"
           className="px-4 py-2 hover:bg-gray-200 rounded-lg transition-colors"
         >
           Start

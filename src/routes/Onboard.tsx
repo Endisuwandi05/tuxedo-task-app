@@ -27,7 +27,7 @@ const instructionalTasks: Task[] = [
   },
 ];
 
-export function Memulai() {
+export function Onboard() {
   const tasks = instructionalTasks;
 
   return (
