@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react";
 import TaskForm from "./components/TaskForm";
 import { TaskList } from "./components/TaskList";
+import { initialDataTasks } from "./data/Tasks";
 
 
 export default function App() {
 
   const [tasks, setTasks] = useState(() => {
-    storedTask = localStorage.getItem(task);
-    return  StoredTask? JSON.parse (StoredTask)
+    
+    const storedTasks = localStorage.getItem("tasks");
+    return storedTasks
+      ? (JSON.parse(storedTasks) as DataRecipe[])
+      : storedTasks;
   });
 
-  useEffect(()=>{
-    localStorage.setItem(tasks,JSON.stringify(tasks));
-  },[tasks]);
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const addTask = (taskName: string) => {
-    const newTask = {
+    const newTask = {[
       id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1,
       name: taskName,
       isCompleted: ]
