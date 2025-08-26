@@ -1,4 +1,4 @@
-export function About() {
+export function Memulai() {
   return (
     <div className="m-10 ">
       <h1 className="text-2x1 font-bold">Tuxedo</h1>
