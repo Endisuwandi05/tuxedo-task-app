@@ -16,6 +16,7 @@ export function TaskList({
       {tasks.map((task) => (
         <li key={task.id}>
           <TaskItem
+            id={task.id}
             isCompleted={task.isCompleted}
             name={task.name}
             onToggleCompletion={() => onToggleCompletion(task.id)}
