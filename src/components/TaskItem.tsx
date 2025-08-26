@@ -4,6 +4,7 @@ import { TrashIcon } from "lucide-react";
 interface TaskProps {
   isCompleted: boolean;
   name: string;
+
   onToggleCompletion: () => void;
   deleteTask: () => void;
 }
