@@ -73,7 +73,11 @@ export function Memulai() {
 
       <div className="mt-8 text-center">
         <button
-          onClick={() => alert("Sekarang kamu  ke halaman utama aplikasi...")}
+          onClick={() =>
+            alert(
+              "Pergi  ke halaman utama aplikasi dan lakukan tugas pertama-mu..."
+            )
+          }
           className="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-transform transform hover:scale-105"
         >
           Mulai Sekarang

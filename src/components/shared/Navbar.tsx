@@ -9,7 +9,7 @@ export function Navbar() {
           <Link to="/">Home</Link>
         </li>
         <li className="px-4 py-2 hover:bg-gray-200 rounded-lg transition-colors">
-          <Link to="/memulai">Memulai</Link>
+          <Link to="/memulai">Start</Link>
         </li>
       </ul>
     </nav>
