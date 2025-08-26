@@ -15,6 +15,7 @@ export default function TaskForm({ onAddTask }: TaskFormProps) {
     if (typeof name === "string" && name.trim() !== "") {
       onAddTask(name.trim());
     }
+    event.currentTarget.reset();
   };
 
   return (
