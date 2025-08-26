@@ -1,4 +1,3 @@
-// DEFINISIKAN TIPE DATA (Sama seperti sebelumnya)
 interface Task {
   id: number;
   name: string;
@@ -35,7 +34,7 @@ export function Memulai() {
     <div className="m-10 p-8 max-w-2xl mx-auto bg-white rounded-xl shadow-lg">
       <div className="text-center">
         <h1 className="text-3xl font-bold text-gray-900">
-          Selamat Datang di Tuxedo!
+          Selamat Datang di Tuxedo App!
         </h1>
         <p className="text-gray-600 mt-2">
           Ini adalah contoh bagaimana daftar tugas Anda akan terlihat.
