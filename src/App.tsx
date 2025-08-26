@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import TaskForm from "./components/TaskForm";
 import { TaskList } from "./components/TaskList";
 import { initialDataTasks } from "./data/Tasks";
+interface Task {
+  id: number;
+  text: string;
+  isCompleted: boolean;
+}
 
 const TASKS_STORAGE_KEY = "tasks";
 
@@ -31,14 +36,14 @@ export default function App() {
   };
 
   const toggleTaskCompletion = (taskId: number) => {
-    const updatedTasks = tasks.map((task) =>
+    const updatedTasks = tasks.map((task: Task) =>
       task.id === taskId ? { ...task, isCompleted: !task.isCompleted } : task
     );
     setTasks(updatedTasks);
   };
 
   const deleteTask = (taskId: number) => {
-    const updatedTasks = tasks.filter((task) => task.id !== taskId);
+    const updatedTasks = tasks.filter((task: Task) => task.id !== taskId);
     setTasks(updatedTasks);
   };
 
